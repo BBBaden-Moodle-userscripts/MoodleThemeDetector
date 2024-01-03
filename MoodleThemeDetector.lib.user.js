@@ -5,7 +5,7 @@ var MoodleThemeDetector = (function () {
         const description = "a library for the moodle theme detector";
         const author = "black-backdoor";
         
-        const homepageURL = ""
+        const homepageURL = "https://github.com/BBBaden-Moodle-userscripts/MoodleThemeDetector"
 
         return {
             name: name,
@@ -60,6 +60,7 @@ var MoodleThemeDetector = (function () {
         else {
             //console.log("Theme stylesheet found: " + stylesheetLink);
             const style = stylesheetLink.replace(stylesheetURL, "").split("/")[0];
+            style = style.LowerCase();
             //console.log("Theme: " + style);
 
             return style;
