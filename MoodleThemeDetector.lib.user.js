@@ -1,7 +1,7 @@
 var MoodleThemeDetector = (function () {
     function info (){
         const name = "MoodleThemeDetector.lib.user.js";
-        const version = "1.0.0";
+        const version = "1.0.1";
         const description = "a library for the moodle theme detector";
         const author = "black-backdoor";
         
@@ -59,10 +59,9 @@ var MoodleThemeDetector = (function () {
         }
         else {
             //console.log("Theme stylesheet found: " + stylesheetLink);
-            const style = stylesheetLink.replace(stylesheetURL, "").split("/")[0];
-            style = style.LowerCase();
+            var style = stylesheetLink.replace(stylesheetURL, "").split("/")[0];
+            style = style.toLowerCase();
             //console.log("Theme: " + style);
-
             return style;
         }
         
